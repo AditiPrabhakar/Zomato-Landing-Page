@@ -323,7 +323,7 @@
     height: 15px;
     width: 15px;
     accent-color: rgb(239, 79, 95); /** inside color of radio buttons when we select it*/
-}
+} 
 
 .right .input_container{
     display: flex;
@@ -374,3 +374,82 @@
 .right .download__app_container div img{
     width: 35%;
 }
+
+/* Media queries for get the app section */
+
+@media only screen and (max-width: 1300px)
+{
+    .get__the_app .semiContainer .left,
+    .get__the_app .semiContainer .right
+    {
+        flex: 1; /* image won't be too small */
+    }
+    .get__the_app .semiContainer{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 900px)
+{
+    .get__the_app
+    {
+        padding: 2rem 0;
+    }
+    .get__the_app .semiContainer{
+        width: 95%;
+    }
+}
+
+/* Explore section */
+.explore{
+    background-color:#fbf9f9;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: -50px;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+    justify-content: center;
+    align-items:center;
+    padding-right: 600px;
+}
+
+.explore .explore__subContainer{
+    width: 60%;
+    /* gap: 1.5rem; */
+}
+
+.explore .explore__subContainer .explore__title
+{
+    /* margin: 0 0 2rem; */
+    padding: 3rem 0 0 0;  
+    color: rgb(54, 54, 54);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.explore .explore__subContainer .drop__down_container{
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+    /* padding-left: 0; */
+}
+.explore .explore__subContainer .drop__down_container .explore__options
+{
+    padding: 1rem;
+    font-weight: 300;
+    margin-top: 2rem ;
+    font-size: 1.2rem;
+    border: none;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 1000px;
+    /* appearance: none;
+    -webkit-appearance: none; */
+    cursor: pointer;
+} 
+
+.explore .explore__subContainer .drop__down_container .explore__options i{
+    size: 100px;
+}
+
