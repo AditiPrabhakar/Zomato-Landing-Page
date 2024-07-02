@@ -407,20 +407,19 @@
     flex-wrap: wrap;
     flex-direction: column;
     margin-top: -50px;
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; */
     justify-content: center;
     align-items:center;
     padding-right: 600px;
+    /* padding: 0 0.1rem; */
 }
 
 .explore .explore__subContainer{
     width: 60%;
-    /* gap: 1.5rem; */
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.explore .explore__subContainer .explore__title
+.explore .explore__subContainer h1
 {
     /* margin: 0 0 2rem; */
     padding: 3rem 0 0 0;  
@@ -430,26 +429,81 @@
 }
 
 .explore .explore__subContainer .drop__down_container{
-    padding-right: 5rem;
+    /* padding-right: 5rem; */
+    width: 100%;
     padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     /* padding-left: 0; */
+    position: relative;
 }
 .explore .explore__subContainer .drop__down_container .explore__options
 {
-    padding: 1rem;
+    width: 100%; 
+    padding: 1.2rem;
     font-weight: 300;
-    margin-top: 2rem ;
+    margin-top: 1rem ;
     font-size: 1.2rem;
     border: none;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     width: 1000px;
-    /* appearance: none;
-    -webkit-appearance: none; */
+    /* width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-appearance: none; /* Remove default arrow for WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow for Firefox */
+    appearance: none;  /* Remove default arrow for other browsers */
     cursor: pointer;
 } 
 
-.explore .explore__subContainer .drop__down_container .explore__options i{
-    size: 100px;
+.drop__down_list {
+    position: relative;
 }
 
+.drop__down_list::after {
+    content: "\f078"; /* FontAwesome chevron down icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(-1rem, -0.1rem);
+    pointer-events: none;
+    padding-left: 10px;
+}
+
+
+@media only screen and (max-width: 1300px)
+{
+    .explore .explore__subContainer{
+        width: 80%;
+    }
+    .explore .explore__subContainer .drop__down_container .explore__options{
+        width: 850px;
+    }
+    .explore .explore__subContainer h1{
+        font-size: 1.8rem;
+    }
+}
+@media only screen and (max-width: 900px)
+{
+    .explore 
+    {
+        padding: 1rem 0;
+    }
+    .explore .explore__subContainer{
+        width: 95%;
+    }
+    .explore .explore__subContainer .drop__down_container .explore__options{
+        width: 100%;
+        padding: 1rem;
+        padding-right: 50px;
+        text-wrap: wrap;
+        line-height: 30px;
+    }
+    .explore .explore__subContainer h1{
+        font-size: 1.8rem;
+    }
+}
