@@ -212,6 +212,7 @@
     background-position: center;
     border-radius: 10px;
     position: relative;
+    cursor: pointer;
 }
 
 .card1{
@@ -506,4 +507,50 @@
     .explore .explore__subContainer h1{
         font-size: 1.8rem;
     }
+}
+
+.footer
+{
+    width: 100%;
+}
+
+.footer_section1
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.footer_section1 img
+{
+    width: 130px;
+}
+
+.section1__buttonContainer
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.section1__buttonContainer button
+{
+    padding: 5px;
+    width: 90px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.navgation_container
+{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(5, 1fr);
 }
